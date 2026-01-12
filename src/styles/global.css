@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Plus Jakarta Sans Variable", system-ui, sans-serif;
+}
+
+.bg-azure-depths {
+    position: relative;
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(226, 232, 240, 0.15),
+      transparent 70%
+    ),
+    #000000;
+}

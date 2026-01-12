@@ -1,14 +1,29 @@
+---
+import '../styles/global.css'
+import '@fontsource-variable/plus-jakarta-sans';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<title>Webify - Desarrollo Web Front-End y Diseño UI</title>
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<meta
+			name="description"
+			content="Agencia de desarrollo web front-end y diseo UI. Creamos sitios web modernos, responsivos y atractivos para impulsar tu presencia dentro del mundo digital."
+		/>
+
+
 	</head>
-	<body>
+	<body class="bg-azure-depths font-sans antialiased ">
+	<Header />
 		<slot />
+	<Footer />
 	</body>
 </html>
 

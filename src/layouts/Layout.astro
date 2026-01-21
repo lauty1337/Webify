@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth" >
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -28,9 +28,9 @@ import Footer from '../components/Footer.astro';
 
 
 	</head>
-	<body class="bg-azure-depths font-sans antialiased ">
+	<body class=" bg-white text-black font-sans antialiased ">
 	<Header />
-	<main class="w-full text-white/90 mx-auto">
+	<main class="w-full mx-auto">
 		<slot />
 	</main>
 	<Footer />

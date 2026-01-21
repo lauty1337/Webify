@@ -2,27 +2,41 @@
 import TickIcon from '../components/icons/TickIcon.astro';
 import WebIcon from '../components/icons/WebIcon.astro';
 import ConstructionIcon from '../components/icons/ConstructionIcon.astro';
+import ArrowIcon from '../components/icons/ArrowIcon.astro';
 
 
 
-const { title, description, features, price, icon, currency} = Astro.props;
+const { title, description, features, price, icon, currency, featured = false } = Astro.props;
 
 const safeFeatures = Array.isArray(features) ? features : [];
 
 const icons = new Map([
   ["web", WebIcon],
   ["construction", ConstructionIcon],
+  ["arrow", ArrowIcon]
 ]);
 
 const SelectedIcon = icons.get(icon) || WebIcon;
 ---
 
-<article class="w-full border border-white/5 bg-white/5 rounded-4xl shadow-2xl shadow-white/5 hover:-translate-y-1 p-12 hover:border-blue-400/15 hover:shadow-blue-400/10 transition-all duration-200 flex flex-col h-full ">
+<article class="relative w-full border border-white/5 bg-white/5 rounded-3xl shadow-2xl shadow-white/5 hover:-translate-y-1 p-12 hover:border-blue-400/20 hover:shadow-blue-400/10 transition-all duration-200 flex flex-col h-full ">
+
+                    {featured && (
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                            <div class="px-4 py-1.5 bg-linear-to-r from-blue-600 to-blue-800 rounded-full shadow-xl shadow-blue-500/20">
+                                <span class="text-xs font-bold text-white uppercase tracking-wider">
+                                Más Popular
+                                </span>
+                            </div>
+                        </div>
+                    )}
                     <header>
                         <SelectedIcon class ="size-10 text-blue-500"/>
+
                         <h3 class="text-lg font-semibold my-4 text-balanced">
                             {title}
                         </h3>
+
                         <p class="text-gray-50/60 leading-relaxed">
                             {description}
                         </p>
@@ -40,16 +54,23 @@ const SelectedIcon = icons.get(icon) || WebIcon;
                         <span class="my-6 block h-px w-full bg-linear-to-r from-blue-500/30 via-blue-500/20 to-transparent"></span>
                     </main>
 
-                    <footer class="flex flex-col">
-                        <p class="text-gray-50/60 text-sm items-center ">
+                    <footer>
+                        <p class="text-gray-50/60 text-sm items-center flex gap-x-2">
                             <span class="text-3xl text-white">${price}</span> 
-                            {currency}
+                            /{currency}
                         </p>
-                        <a href="" class="text-white/90 border border-white/5 p-5 mt-5 rounded-lg text-center  shadow-xl hover:bg-white/5 hover:shadow-white/5 hover:shadow-2xl transition-all duration-200"
-                        >
+                        <a href="" class:list={[
+                            "text-white/90 border flex p-5 mt-5 rounded-lg text-center group justify-center items-center transition-all  duration-200",
+                            {
+                                "border-blue-600/30 bg-blue-700/80 hover:shadow-xl hover:bg-blue-600 hover:shadow-blue-700/10": featured,
+                                "border-white/5 bg-white/5 hover:bg-white/8 hover:shadow-white/5 hover:shadow-2xl": !featured
+                            }
+                        ]}>
                             Cotizar servicio
                         </a>
                     </footer>
+                    
 
 
                 </article>
+                

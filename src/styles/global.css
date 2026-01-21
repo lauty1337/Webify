@@ -5,23 +5,3 @@
     --font-serif: "Playfair Display Variable", serif;
 }
 
-.bg-azure-depths {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-  background:
-    radial-gradient(
-      ellipse 80% 60% at 50% 0%,
-      rgba(226, 232, 240, 0.15),
-      transparent 70%
-    ),
-    #000000;
-}
-@layer utilities {
-  .text-gradient-hero {
-    @apply bg-linear-to-tl from-transparent via-stone-200 to-slate-50 bg-clip-text text-transparent;
-  }
-  .text-gradient-subtitle {
-    @apply bg-linear-to-br from-blue-900 via-blue-600 to-cyan-100 bg-clip-text text-transparent;
-  }
-}

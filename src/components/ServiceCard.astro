@@ -19,58 +19,99 @@ const icons = new Map([
 const SelectedIcon = icons.get(icon) || WebIcon;
 ---
 
-<article class="relative w-full border border-white/5 bg-white/5 rounded-3xl shadow-2xl shadow-white/5 hover:-translate-y-1 p-8 lg:p-10 hover:border-blue-400/20 hover:shadow-blue-400/10 transition-all duration-200 flex flex-col h-full ">
-
+                <article class:list={[
+                    "relative w-full border rounded-3xl border-black/15 hover:shadow-2xl hover:-translate-y-1 p-8 lg:p-10 flex flex-col h-full transition-all duration-200 group",
+                    {
+                        "bg-black":featured,
+                        "bg-white/95 ":!featured,
+                    }
+                ]}>
                     {featured && (
                         <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                            <div class="px-4 py-1.5 bg-linear-to-r from-blue-600 to-blue-800 rounded-full shadow-xl shadow-blue-500/20">
+                            <div class="px-4 py-1 bg-linear-to-r from-blue-600 to-blue-800 rounded-full shadow-xl shadow-blue-500/20">
                                 <span class="text-xs font-bold text-white uppercase tracking-wider">
                                 Más Popular
                                 </span>
                             </div>
                         </div>
                     )}
-                    <header>
-                        <SelectedIcon class ="size-10 text-blue-500"/>
 
-                        <h3 class="text-lg font-semibold my-4 text-balanced">
+                    <header>
+                        <div class:list={[
+                            "inline-flex p-2 rounded-2xl transition-all duration-200",
+                            {
+                                "bg-gray-500/30 group-hover:bg-gray-400/40": featured,
+                                "bg-gray-300/40 group-hover:bg-gray-500/30":!featured,
+                            }
+                        ]}>
+                            <SelectedIcon class:list={[
+                                "size-8",
+                                {
+                                    "text-white": featured,
+                                }
+                            ]}/>
+                        </div>
+
+                        <h3 class:list={[
+                            "text-2xl font-semibold my-4 text-balanced",
+                            {
+                                "text-white": featured,
+                                "text-black/90": !featured,
+                            }
+                        ]}>
                             {title}
                         </h3>
 
-                        <p class="text-gray-50/60 leading-relaxed">
+                        <p class:list={[
+                            "leading-relaxed",
+                            {
+                                "text-white/80": featured,
+                                "text-gray-700/80": !featured,
+                            }
+                        ]}>
                             {description}
                         </p>
                     </header>
 
                     <main>
-                        <ul class="mt-6 flex flex-col gap-4 text-white/80">
+                        <ul class="mt-6 flex flex-col gap-5 ">
                             {safeFeatures.map((feature) => (
-                                <li class="flex items-start gap-x-2">
-                                    <TickIcon class="mt-1 inline-block size-4 shrink-0 text-blue-500" />
-                                    <span class="leading-relaxed">{feature}</span>
+                                <li class="flex items-start gap-x-3">
+                                    <TickIcon class="mt-1 inline-block size-5 shrink-0 text-blue-500" />
+                                    <span class:list={[
+                                        "leading-relaxed",
+                                        {
+                                            "text-white": featured,
+                                            "text-black/90": !featured,
+                                        }
+                                    ]}>{feature}</span>
                                 </li>
                             ))}
                         </ul>
-                        <span class="my-6 block h-px w-full bg-linear-to-r from-blue-500/30 via-blue-500/20 to-transparent"></span>
+                        <span class="my-6 block h-px w-full bg-gray-300/30"></span>
                     </main>
 
                     <footer>
-                        <p class="text-gray-50/60 text-sm items-center flex gap-x-2">
-                            <span class="text-3xl text-white">${price}</span> 
+                        <p class="text-gray-500 font-semibold">Desde</p>
+
+                        <p class="text-sm font-bold items-baseline text-gray-500 flex gap-x-2">
+                            <span class:list={[
+                                "text-3xl font-extrabold",
+                                {
+                                    "text-white": featured,
+                                    "text-black/90": !featured,
+                                }
+                            ]}>${price}</span> 
                             /{currency}
                         </p>
                         <a href="" class:list={[
-                            "text-white/90 border flex p-5 mt-5 rounded-lg text-center group justify-center items-center transition-all  duration-200",
+                            "text-black/90 font-semibold border flex p-4 mt-5 rounded-lg text-center group justify-center items-center transition-all  duration-200",
                             {
-                                "border-blue-600/30 bg-blue-700/80 hover:shadow-xl hover:bg-blue-600 hover:shadow-blue-700/10": featured,
-                                "border-white/5 bg-white/5 hover:bg-white/8 hover:shadow-white/5 hover:shadow-2xl": !featured
+                                " bg-white  hover:bg-white/70": featured,
+                                "border-gray-700/15 bg-gray-500/20 hover:bg-gray-500/50 hover:border-gray-700/20": !featured
                             }
                         ]}>
                             Solicitar cotización
                         </a>
                     </footer>
-                    
-
-
                 </article>
-                

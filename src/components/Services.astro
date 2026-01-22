@@ -2,10 +2,11 @@
 
 import ServiceCard from "./ServiceCard.astro";
 
+
 const service = [
     {
         id: 'landing-pages',
-        title: 'Landing Page de Alta Conversion',
+        title: 'Landing Pages, Branding y Portfolios de alta conversion ',
         description: 'Pagina web optimizada para velocidad, SEO y experiencia de usuario perfecta en todos los dispositivos.',
         price: 150,
         currency: 'USD',
@@ -29,7 +30,7 @@ const service = [
             'Mejora de velocidad hasta 10x',
             'Diseño moderno y atractivo',
             'Optimización SEO y velocidad',
-            'Integración con herramientas existentes'
+            'Integración con herramientas existentes',
         ],
         icon: 'construction',
         featured: true
@@ -37,15 +38,18 @@ const service = [
 ]
 ---
 
-<section class="bg-gray-300/10 py-14    " id="services">
+<section class="bg-gray-300/10 py-16 border-b scroll-mt-6 border-gray-400/20" id="services">
     <div class="max-w-6xl mx-auto p-4 ">
         <header class="text-center">
-            <p class="text-blue-500 font-medium text-lg mb-3 ">
-                Nuestros servicios
+            <p class="text-blue-500 font-semibold text-lg ">
+                Servicios
             </p>
-            <h2 class="text-4xl font-bold mb-5">
-                Servicios diseñados para generar resultados
+            <h2 class="text-6xl font-bold mb-5">
+                Dos soluciones, resultados reales
             </h2>
+            <p class="text-gray-600">
+                Oferta especial de lanzamiento: <span class="text-blue-600 font-bold">40% de descuento</span> para los primeros 5 clientes
+            </p>
         </header>
         <div class="grid  md:grid-cols-2 gap-8 mt-10 ">
             {service.map((service) => (

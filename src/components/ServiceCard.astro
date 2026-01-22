@@ -20,15 +20,15 @@ const SelectedIcon = icons.get(icon) || WebIcon;
 ---
 
                 <article class:list={[
-                    "relative w-full border rounded-3xl border-black/15 hover:shadow-2xl hover:-translate-y-1 p-8 lg:p-10 flex flex-col h-full transition-all duration-200 group",
+                    "relative border gap-6 rounded-3xl border-black/15 hover:shadow-2xl hover:-translate-y-1 p-8 lg:p-10 grid grid-rows-[auto_1fr_auto_auto] transition-all duration-200 group",
                     {
                         "bg-black":featured,
                         "bg-white/95 ":!featured,
                     }
                 ]}>
                     {featured && (
-                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                            <div class="px-4 py-1 bg-linear-to-r from-blue-600 to-blue-800 rounded-full shadow-xl shadow-blue-500/20">
+                        <div class="absolute -top-4  left-1/2 -translate-x-1/2 z-10">
+                            <div class="px-4 py-1 rounded-full bg-linear-to-r from-blue-500 to-blue-700 shadow-xl shadow-blue-500/30">
                                 <span class="text-xs font-bold text-white uppercase tracking-wider">
                                 Más Popular
                                 </span>
@@ -53,7 +53,7 @@ const SelectedIcon = icons.get(icon) || WebIcon;
                         </div>
 
                         <h3 class:list={[
-                            "text-2xl font-semibold my-4 text-balanced",
+                            "text-2xl min-h-16 font-semibold my-4 text-balanced",
                             {
                                 "text-white": featured,
                                 "text-black/90": !featured,
@@ -63,7 +63,7 @@ const SelectedIcon = icons.get(icon) || WebIcon;
                         </h3>
 
                         <p class:list={[
-                            "leading-relaxed",
+                            "leading-relaxed  ",
                             {
                                 "text-white/80": featured,
                                 "text-gray-700/80": !featured,
@@ -73,8 +73,8 @@ const SelectedIcon = icons.get(icon) || WebIcon;
                         </p>
                     </header>
 
-                    <main>
-                        <ul class="mt-6 flex flex-col gap-5 ">
+                    <main class="">
+                        <ul class="flex flex-col gap-3 ">
                             {safeFeatures.map((feature) => (
                                 <li class="flex items-start gap-x-3">
                                     <TickIcon class="mt-1 inline-block size-5 shrink-0 text-blue-500" />
@@ -88,8 +88,8 @@ const SelectedIcon = icons.get(icon) || WebIcon;
                                 </li>
                             ))}
                         </ul>
-                        <span class="my-6 block h-px w-full bg-gray-300/30"></span>
                     </main>
+                            <span class="block h-px w-full bg-gray-300/30"></span>
 
                     <footer>
                         <p class="text-gray-500 font-semibold">Desde</p>

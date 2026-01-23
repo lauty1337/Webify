@@ -3,9 +3,10 @@ import '../styles/global.css'
 import '@fontsource-variable/plus-jakarta-sans';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Lenis from 'lenis'
 ---
 <!doctype html>
-<html lang="es" class="scroll-smooth" >
+<html lang="es" class="lenis" >
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -31,9 +32,10 @@ import Footer from '../components/Footer.astro';
 		<slot />
 	</main>
 	<Footer />
+	<script>
+		import '../scripts/lenis.js'
+	</script>
 	</body>
 </html>
 
-<style>
-	
-</style>
+

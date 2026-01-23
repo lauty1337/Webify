@@ -1,0 +1,38 @@
+---
+import DesignIcon from '../components/icons/DesignIcon.astro';
+import LupaIcon from '../components/icons/LupaIcon.astro';
+import CodeIcon from '../components/icons/CodeIcon.astro';
+import RocketIcon from '../components/icons/RocketIcon.astro';
+
+const {step, title, description, icon } = Astro.props
+
+const icons = new Map([
+    ["rocket", RocketIcon],
+    ["code", CodeIcon],
+    ["design", DesignIcon],
+    ["lupa", LupaIcon],
+])
+
+const SelectedIcon = icons.get(icon) || CodeIcon;
+---
+
+
+
+        <article class="relative border border-black/7 rounded-2xl bg-gray-200/10 p-4 min-h-96">
+            <span aria-label="{Paso ${step}}" class="absolute top-3 right-3 text-6xl font-extrabold text-blue-500/15 select-none">
+                {step}
+            </span>
+            <div class=" relative z-10 flex flex-col h-full items-center">
+                <div class="bg-blue-200/40 p-2 rounded-2xl  w-fit mt-18 ">
+                    <SelectedIcon class="size-8 text-blue-500" />
+                </div>
+            
+
+            <h3 class="text-2xl font-bold my-5">
+                {title}
+            </h3>
+            <p class="text-gray-600 justify-center  text-center">
+                {description}
+            </p>
+            </div>
+        </article>

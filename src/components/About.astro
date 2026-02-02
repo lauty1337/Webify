@@ -1,0 +1,72 @@
+---
+import AboutItem from "./AboutItem.astro"
+
+const about = [
+    {
+        time: '2023',
+        title: 'Nace Webify',
+        description: 'Comienzo enfocado en dominar HTML, CSS y bases sólidas de diseño web, priorizando estructura semántica, buenas prácticas y sitios claros, rápidos y funcionales desde el primer día.',
+    },
+    {
+        time: '2024',
+        title: 'Especializacion en Performance y UI',
+        description: 'Profundización en Tailwind CSS, optimización de rendimiento y Core Web Vitals. Desarrollo de interfaces modernas, limpias y eficientes, con foco en experiencia de usuario y velocidad real.',
+    },
+    {
+        time: '2025',
+        title: 'Evolucion a Soluciones Profesionales',
+        description: 'Expansión hacia rediseños, optimización de sitios existentes y proyectos con estándares de nivel profesional. Aplicación de criterios de escalabilidad, SEO técnico y calidad visual de alto nivel.'
+    }
+        
+    
+    
+]
+---
+
+<section class="bg-gray-300/10 border-t border-gray-400/20 py-16">
+
+    <div class="max-w-6xl px-4 gap-20 mx-auto grid grid-cols-2">
+        <div>
+            <p class="text-blue-500 font-semibold">
+                ¿Por que nosotros?
+            </p>
+            <header class="my-4">
+                <h2 class="text-3xl font-bold  leading-relaxed">
+                    Creamos experiencias web que 
+                    <span class="text-gray-500">convierten</span>
+                </h2>
+            </header>
+            <p class="text-gray-800/80">
+                No somos una agencia más. Creamos páginas web rápidas, modernas y pensadas para convertir desde el primer segundo. Cada proyecto se construye con foco en diseño claro, estructura profesional y una experiencia que transmite confianza real.
+            </p>
+            <p class="text-gray-800/80 my-7">
+                Nada de promesas vacías ni soluciones genéricas. Trabajamos con código limpio, tiempos de carga optimizados y decisiones estratégicas que hacen que tu web se vea profesional, funcione mejor y esté lista para crecer. Menos vueltas, más resultados.
+            </p>
+            <dl class="border-t border-gray-400/20 grid grid-cols-3 gap-x-6">
+                <div class="mt-10">
+                    <dt class="text-xl font-bold">Resultados</dt>
+                    <dd class="text-sm ">Webs pensadas para convertir</dd>
+                </div>
+                <div class="mt-10">
+                    <dt class="text-xl font-bold">Criterio</dt>
+                    <dd class="text-sm ">Nada genérico, todo con intención</dd>
+                </div>
+                <div class="mt-10">
+                    <dt class="text-xl font-bold">Escalabilidad</dt>
+                    <dd class="text-sm ">Listas para crecer con tu negocio</dd>
+                </div>
+            </dl>
+        </div>
+
+        <div class="relative">
+            <div class="absolute left-1.75 top-6 bottom-6 w-px bg-gray-200"> </div>
+                <div class="space-y-6">
+                    {
+                        about.map(about =>
+                            <AboutItem {...about} />
+                        )
+                    }
+                </div>
+        </div>
+    </div>
+</section>

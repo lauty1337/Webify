@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/orbitron": "^5.2.8",
     "@fontsource-variable/playfair-display": "^5.2.8",
     "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
     "@tailwindcss/vite": "^4.1.18",

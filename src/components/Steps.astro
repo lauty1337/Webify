@@ -1,5 +1,6 @@
 ---
-import ProcessItem from "../components/ProcessItem.astro"
+import type { ActionAPIContext } from "astro:actions"
+import StepItem from "../components/StepItem.astro"
 
 
 
@@ -10,22 +11,19 @@ const steps = [
         title: 'Consulta inicial',
         description: 'Conversamos sobre tus objetivos, necesidades y vision. Definimos alcance, tiempo y presupuesto del proyecto',
         icon: 'lupa',
-    }
-    ,
+    },
     {
         step: '02',
         title: 'Diseño UI/UX',
-        description: 'Se diseña el proyecto en Figma, donde vamos se puede modificar a gusto hasta que el diseño refleje tu marca perfectamente',
+        description: 'Se diseña el proyecto en Figma, donde se puede modificar a gusto hasta que el diseño sea el que estes buscando',
         icon: 'design',
-    }
-    ,
+    },
     {
         step: '03',
         title: 'Desarrollo',
         description: 'Transformamos el diseño en codigo con tecnologias modernas. Optimizado para velocidad, SEO y una experiencia de usuario unica',
         icon: 'code',
-    }
-    ,
+    },
     {
         step: '04',
         title: 'Lanzamiento',
@@ -36,19 +34,20 @@ const steps = [
 ---
 
 <section class="py-16 scroll-mt-18.75" id="process">
-    <div class="max-w-6xl px-4 mx-auto items-center">
+    <div class="max-w-6xl px-4 mx-auto">
         <header class="text-center">
             <p class="text-blue-500 font-semibold text-lg"> Proceso</p>
             <h2 class="text-6xl font-bold mb-5">Como trabajamos juntos</h2>
             <p class="text-gray-500">De la idea al lanzamiento en 4 pasos </p>
         </header>
 
-        <div class="grid grid-cols-4 mt-10 gap-8">
+        <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-8 list-none" aria-label="Pasos del proceso">
             {
-                steps.map(steps => (
-                    <ProcessItem  {...steps} />
+                steps.map((steps) => (
+                    <StepItem {...steps} />
                 ))
             }
-        </div>
+        </ol>
     </div>
 </section>
+

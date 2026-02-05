@@ -1,0 +1,12 @@
+{
+    "cSpell.language": "es,en",
+    "cSpell.words": [],
+    "cSpell.dictionaries": ["project-words"],
+    "cSpell.customDictionaries": {
+        "project-words": {
+            "name": "Palabras del proyecto",
+            "path": "${workspaceFolder}/project-words.txt",
+            "addWords": true
+        }
+    }
+}

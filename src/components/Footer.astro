@@ -1,0 +1,51 @@
+---
+import VelarIcon from "./icons/VelarIcon.astro"
+import GitHubIcon from "./icons/GitHubIcon.astro"
+import InstagramIcon from "./icons/InstagramIcon.astro"
+import LinkedInIcon from "./icons/LinkedInIcon.astro"
+---
+
+<footer class="bg-gray-200 border border-t-black/10 pt-8 pb-2">
+
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 ">
+
+        <div class="space-y-4">
+
+            <h2 class="items-center font-serif flex">
+                <VelarIcon class="size-10"/>
+                Velar
+            </h2>
+
+            <p class="max-w-72 text-black/70 leading-relaxed font-bold text-xs">
+                Soluciones web profesionales que potencia la presencia digital de cada marca.
+            </p>
+
+            <ul class="flex gap-x-6 text-gray-700">
+                <li>
+                    <a href="https://www.linkedin.com/in/lautaro-sanchez-visser-8bb19a338/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <LinkedInIcon />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/lauty1337" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <GitHubIcon />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lautyvisser/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <InstagramIcon />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <nav>
+            <ul class="flex flex-col gap-y-2 gap-x-3 text-sm text-gray-700">
+                <li><a href="#services" class="hover:underline">Servicios</a></li>
+                <li><a href="#process" class="hover:underline">Proceso</a></li>
+                <li><a href="#about" class="hover:underline">¿Por que nosotros?</a></li>
+                <li><a href="" class="hover:underline">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>

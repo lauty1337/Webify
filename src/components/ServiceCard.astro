@@ -2,7 +2,6 @@
 import TickIcon from '../components/icons/TickIcon.astro';
 import WebIcon from '../components/icons/WebIcon.astro';
 import ConstructionIcon from '../components/icons/ConstructionIcon.astro';
-import ArrowIcon from '../components/icons/ArrowIcon.astro';
 
 
 
@@ -11,9 +10,8 @@ const { title, description, features, originalPrice, discountPrice, discount, ic
 const safeFeatures = Array.isArray(features) ? features : [];
 
 const icons = new Map([
-  ["web", WebIcon],
-  ["construction", ConstructionIcon],
-  ["arrow", ArrowIcon]
+    ["web", WebIcon],
+    ["construction", ConstructionIcon],
 ]);
 
 const SelectedIcon = icons.get(icon) || WebIcon;
@@ -115,9 +113,9 @@ const SelectedIcon = icons.get(icon) || WebIcon;
                             <span class="line-through">${originalPrice}</span>
 
                             <span class:list={[
-                                "rounded py-0.5 px-1 text-sm hidden ",
+                                "rounded py-0.5 px-1 text-sm  ",
                                 {
-                                    "bg-blue-500 text-white  ":featured,
+                                    "bg-blue-600 text-white  ":featured,
                                     "bg-blue-200 text-blue-600 ":!featured,
                                 }
                             ]}>-{discount}%</span>

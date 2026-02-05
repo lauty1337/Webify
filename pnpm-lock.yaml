@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/orbitron':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@fontsource-variable/playfair-display':
         specifier: ^5.2.8
         version: 5.2.8
@@ -225,6 +228,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource-variable/orbitron@5.2.8':
+    resolution: {integrity: sha512-Jazvuj2cgBq663z1j/+JdwH2ztqQ8RaGhJgdHYphFbtfowiFaR74R8UgZl7x1skbXmUMWWH1jXfG7mrYFIYK0A==}
 
   '@fontsource-variable/playfair-display@5.2.8':
     resolution: {integrity: sha512-ZzVIXPOrL85yyOvZYoBzUszIJM+xKkHqni4IYn2CVLaGQQdJR8sBeC8yFNgjxSJ7ludTwta8qpULeOFuk5X75A==}
@@ -1854,6 +1860,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.12':
     optional: true
+
+  '@fontsource-variable/orbitron@5.2.8': {}
 
   '@fontsource-variable/playfair-display@5.2.8': {}
 

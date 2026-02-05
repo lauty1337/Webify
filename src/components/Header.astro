@@ -2,13 +2,15 @@
 import VelarIcon from "./icons/VelarIcon.astro"
 ---
 
-<header role="banner" class="font-semibold max-w-6xl mx-auto sticky  top-2 backdrop-blur-xl z-50 bg-white/80 border border-gray-400/30 rounded-2xl">
+<header role="banner" id="header" class="font-semibold max-w-6xl mx-auto sticky px-4  top-2 backdrop-blur-xl z-50 bg-white/80 border border-gray-400/30 rounded-2xl">
     <div class=" px-5 flex justify-between items-center py-3">
 
-            <a href="#hero" aria-label="Webify, Inicio" class="text-[28px] flex items-center hover:text-black/70 transition-colors duration-300">
-                <VelarIcon class="size-9"/>
-                <span class="block">velar</span>
+        <div>
+            <a href="#hero" aria-label="Velar - Inicio" class=" flex items-center hover:text-black/70 transition-colors duration-300">
+                <VelarIcon class="size-10 w-auto"/>
+                <span class=" text-[28px] leading-relaxed font-serif font-light">Velar</span>
             </a>
+        </div>
 
         <nav role="navigation" aria-label="Menu de navegacion principal">
             <ul class="flex gap-x-2 text-[15px] ">
@@ -23,7 +25,7 @@ import VelarIcon from "./icons/VelarIcon.astro"
                     </a>
                 </li>
                 <li>
-                    <a href="" class=" flex justify-center border border-transparent opacity-70 hover:bg-black/10 hover:opacity-100 rounded-lg px-4 py-2 transition-all duration-200">
+                    <a href="#about" class=" flex justify-center border border-transparent opacity-70 hover:bg-black/10 hover:opacity-100 rounded-lg px-4 py-2 transition-all duration-200">
                         ¿Por que nosotros?
                     </a>
                 </li>
@@ -32,8 +34,11 @@ import VelarIcon from "./icons/VelarIcon.astro"
                 </li>
             </ul>
         </nav>
+
             <a href="" class=" flex border text-white border-blue-500/30 shadow-2xl shadow-blue-700/40 bg-blue-700 px-5 py-1.5 rounded-lg hover:bg-blue-700/90 hover:scale-105  transition-all duration-200">
                     Contacto
             </a>
+
     </div>
 </header>
+

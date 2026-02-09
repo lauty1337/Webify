@@ -1,5 +1,4 @@
 ---
-import type { ActionAPIContext } from "astro:actions"
 import StepItem from "../components/StepItem.astro"
 
 
@@ -9,26 +8,30 @@ const steps = [
     {
         step: '01',
         title: 'Consulta inicial',
-        description: 'Conversamos sobre tus objetivos, necesidades y vision. Definimos alcance, tiempo y presupuesto del proyecto',
+        description: 'Conversamos sobre tus objetivos, necesidades y visión. Definimos alcance, tiempo y presupuesto del proyecto.',
         icon: 'lupa',
+        delay: 1,
     },
     {
         step: '02',
         title: 'Diseño UI/UX',
-        description: 'Se diseña el proyecto en Figma, donde se puede modificar a gusto hasta que el diseño sea el que estes buscando',
+        description: 'Se diseña el proyecto en Figma, donde se puede modificar a gusto hasta que el diseño sea el que estés buscando.',
         icon: 'design',
+        delay: 2,
     },
     {
         step: '03',
         title: 'Desarrollo',
-        description: 'Transformamos el diseño en codigo con tecnologias modernas. Optimizado para velocidad, SEO y una experiencia de usuario unica',
+        description: 'Transformamos el diseño en código con tecnologías modernas. Optimizado para velocidad, SEO y una experiencia de usuario única.',
         icon: 'code',
+        delay: 3,
     },
     {
         step: '04',
         title: 'Lanzamiento',
-        description: 'Despues del testing de la pagina y deploy. Se te entrega el sitio funcionando sin costo de hosting',
+        description: 'Después del testing de la página y deploy. Se te entrega el sitio funcionando sin costo de hosting.',
         icon: 'rocket',
+        delay: 4,
     }
 ]
 ---
@@ -37,14 +40,14 @@ const steps = [
     <div class="max-w-6xl px-4 mx-auto">
         <header class="text-center">
             <p class="text-blue-500 font-light tracking-widest text-lg"> Proceso</p>
-            <h2 class="text-6xl font-bold mb-5">Como trabajamos juntos</h2>
-            <p class="text-gray-600">De la idea al lanzamiento en 4 pasos </p>
+            <h2 class="text-6xl font-bold mb-5">Cómo trabajamos juntos</h2>
+            <p class="text-gray-600">De la idea al lanzamiento en 4 pasos.</p>
         </header>
 
         <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-8 list-none" aria-label="Pasos del proceso">
             {
-                steps.map((steps) => (
-                    <StepItem {...steps} />
+                steps.map((step) => (
+                    <StepItem {...step} />
                 ))
             }
         </ol>

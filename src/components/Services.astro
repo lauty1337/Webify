@@ -6,20 +6,21 @@ import ServiceCard from "./ServiceCard.astro";
 const service = [
     {
         id: 'landing-pages',
-        title: 'Landing Pages, Branding y Portfolios de alta conversion ',
-        description: 'Pagina web optimizada para velocidad, SEO y experiencia de usuario perfecta en todos los dispositivos.',
+        title: 'Landing Pages, Branding y Portfolios',
+        description: 'Página web optimizada para velocidad, SEO y experiencia de usuario perfecta en todos los dispositivos.',
         discount: 40,
         originalPrice: 350,
         discountPrice: 250,
         currency: 'USD',
         features: [
             'Diseño responsive premium y personalizado',
-            'SEO optimizado desde dia 1',
+            'SEO optimizado desde el día 1',
             'Velocidad de carga < 2 segundos',
             'Formulario de contacto integrado',
         ],
         icon: 'web',
-        featured: false
+        featured: false,
+        delay: 1,
     },
     {
         id: 'web-redesign',
@@ -36,7 +37,8 @@ const service = [
             'Integración con herramientas existentes',
         ],
         icon: 'construction',
-        featured: true
+        featured: true,
+        delay: 2,
     }
 ]
 ---

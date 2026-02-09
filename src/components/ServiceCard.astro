@@ -5,7 +5,7 @@ import ConstructionIcon from '../components/icons/ConstructionIcon.astro';
 
 
 
-const { title, description, features, originalPrice, discountPrice, discount, icon, currency, featured = false } = Astro.props;
+const { title, description, features, originalPrice, discountPrice, discount, icon, currency, featured = false, delay = 0 } = Astro.props;
 
 const safeFeatures = Array.isArray(features) ? features : [];
 
@@ -17,7 +17,7 @@ const icons = new Map([
 const SelectedIcon = icons.get(icon) || WebIcon;
 ---
 
-                <article class:list={[
+                <article data-reveal style={`transition-delay: ${delay * 0.1}s`} class:list={[
                     "relative border gap-6 rounded-3xl border-black/15 hover:shadow-2xl hover:-translate-y-1 p-8 lg:p-10 grid grid-rows-[auto_1fr_auto_auto] transition-all duration-200 group",
                     {
                         "bg-black":featured,
@@ -121,9 +121,9 @@ const SelectedIcon = icons.get(icon) || WebIcon;
                             ]}>-{discount}%</span>
                         </p>
 
-                        <p class="mt-3 text-gray-500 ">Precio regular: <span class="font-bold">${originalPrice} USD</span></p>
+                        <p class="mt-3 text-gray-500 ">Precio regular: <span class="font-bold text-gray-500/40">${originalPrice} USD</span></p>
 
-                        <a href="" class:list={[
+                        <a href="#contact" class:list={[
                             "text-black/90 font-semibold border flex p-4 mt-5 rounded-lg text-center group justify-center items-center transition-all  duration-200",
                             {
                                 " bg-white  hover:bg-white/70": featured,

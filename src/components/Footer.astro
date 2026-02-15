@@ -5,7 +5,7 @@ import InstagramIcon from "./icons/InstagramIcon.astro"
 import LinkedInIcon from "./icons/LinkedInIcon.astro"
 ---
 
-<footer class="bg-gray-200 border border-t-black/10 pt-8 pb-2">
+<footer class="border-t bg-gray-200  border-black/10 dark:border-white/10 dark:bg-gray-900/10 pt-8 pb-5">
 
     <div class="max-w-6xl mx-auto flex justify-between items-center px-4 ">
 
@@ -16,18 +16,18 @@ import LinkedInIcon from "./icons/LinkedInIcon.astro"
                 Velar
             </h2>
 
-            <p class="max-w-72 text-black/70 leading-relaxed font-bold text-xs">
+            <p class="max-w-72 text-black/70 dark:text-gray-300 leading-relaxed font-bold text-xs">
                 Soluciones web profesionales que potencian la presencia digital de cada marca.
             </p>
 
-            <ul class="flex gap-x-6 text-gray-700">
+            <ul class="flex gap-x-6 text-gray-700 dark:text-gray-300">
                 <li>
-                    <a href="https://www.linkedin.com/in/lautaro-sanchez-visser-8bb19a338/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/lautaro-sanchez-visser-8bb19a338/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="hover:scale-120 transition-all duration-200 inline-block">
                         <LinkedInIcon />
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/lauty1337" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/lauty1337" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="hover:scale-120 transition-all duration-200 inline-block">
                         <GitHubIcon />
                     </a>
                 </li>
@@ -40,11 +40,11 @@ import LinkedInIcon from "./icons/LinkedInIcon.astro"
         </div>
 
         <nav>
-            <ul class="flex flex-col gap-y-2 gap-x-3 text-sm text-gray-700">
-                <li><a href="#services" class="hover:underline">Servicios</a></li>
-                <li><a href="#process" class="hover:underline">Proceso</a></li>
-                <li><a href="#about" class="hover:underline">Sobre mí</a></li>
-                <li><a href="#contact" class="hover:underline">Contacto</a></li>
+            <ul class="flex md:flex-col gap-y-2 gap-x-3 text-sm text-gray-700 dark:text-gray-300">
+                <li><a href="#services" class="hover:underline hover:decoration-blue-600">Servicios</a></li>
+                <li><a href="#process" class="hover:underline hover:decoration-blue-600">Proceso</a></li>
+                <li><a href="#about" class="hover:underline hover:decoration-blue-600">Sobre mí</a></li>
+                <li><a href="#contact" class="hover:underline hover:decoration-blue-600">Contacto</a></li>
             </ul>
         </nav>
     </div>

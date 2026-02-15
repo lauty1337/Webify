@@ -18,18 +18,18 @@ const SelectedIcon = icons.get(icon) || CodeIcon;
 
 
 
-        <li data-reveal style={`transition-delay: ${delay * 0.1}s`} class="relative border border-black/7 rounded-2xl bg-gray-200/10 p-4 min-h-96">
-            <span aria-hidden="true" class="absolute top-3 right-3 text-6xl font-extrabold font-serif text-blue-500/15 select-none">
+        <li data-reveal style={`transition-delay: ${delay * 0.1}s`} class="relative border border-black/7 dark:border-white/4 dark:bg-black/10 rounded-2xl bg-gray-200/10 p-4 min-h-96">
+            <span aria-hidden="true" class="absolute top-3 right-3 text-6xl font-extrabold font-serif text-blue-500/15 dark:text-blue-500/5 select-none">
                 {step}
             </span>
             <div class="relative z-10 flex flex-col h-full items-center">
-                <div class="bg-blue-200/40 p-2 rounded-2xl w-fit mt-18">
+                <div class="bg-blue-200/40 dark:bg-blue-900/40 p-2 rounded-2xl w-fit mt-18">
                     <SelectedIcon class="size-8 text-blue-500" aria-hidden="true" />
                 </div>
                 <h3 class="text-2xl font-bold my-5">
                     {title}
                 </h3>
-                <p class="text-gray-600 justify-center text-center">
+                <p class="text-gray-600 dark:text-gray-400 justify-center text-center">
                     {description}
                 </p>
             </div>

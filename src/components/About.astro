@@ -23,7 +23,7 @@ const about = [
 ]
 ---
 
-<section class="bg-gray-300/10 border-t border-gray-400/20 py-16 scroll-mt-20" id="about">
+<section class="bg-gray-300/10 border-t border-b border-gray-400/20 dark:bg-[#131313] py-16 scroll-mt-20" id="about">
 
     <div class="max-w-6xl px-4 gap-20 mx-auto grid grid-cols-2">
         <div>
@@ -36,30 +36,30 @@ const about = [
                     <span class="text-gray-500">convierten</span>
                 </h2>
             </header>
-            <p class="text-gray-600">
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
                 Me especializo en páginas web rápidas, modernas y pensadas para convertir. Cada proyecto lo construyo con diseño claro, estructura profesional y una experiencia que transmita confianza.
             </p>
-            <p class="text-gray-600 my-7">
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed my-7">
                 Sin promesas vacías ni plantillas genéricas. Código limpio, tiempos de carga optimizados y decisiones que hacen que tu web se vea profesional, funcione bien y esté lista para crecer. Menos vueltas, más resultados.
             </p>
-            <dl class="border-t border-gray-400/20 grid grid-cols-3 gap-x-6">
+            <dl class="border-t border-gray-400/20 dark:border-white/20 grid grid-cols-3 gap-x-6">
                 <div class="mt-10">
-                    <dt class="text-xl font-bold">Resultados</dt>
+                    <dt class="text-xl font-bold text-blue-500">Resultados</dt>
                     <dd class="text-sm ">Webs pensadas para convertir</dd>
                 </div>
                 <div class="mt-10">
-                    <dt class="text-xl font-bold">Criterio</dt>
+                    <dt class="text-xl font-bold text-blue-500">Criterio</dt>
                     <dd class="text-sm ">Nada genérico, todo con intención</dd>
                 </div>
                 <div class="mt-10">
-                    <dt class="text-xl font-bold">Escalabilidad</dt>
+                    <dt class="text-xl font-bold text-blue-500">Escalabilidad</dt>
                     <dd class="text-sm ">Listas para crecer con tu negocio</dd>
                 </div>
             </dl>
         </div>
 
         <div class="relative">
-            <div class="absolute left-1.75 top-6 bottom-6 w-px bg-gray-200"> </div>
+            <div class="absolute left-1.75 top-6 bottom-6 w-px bg-gray-200 dark:bg-gray-200/20"> </div>
                 <div class="space-y-6">
                     {
                         about.map(about =>

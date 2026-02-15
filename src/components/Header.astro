@@ -1,6 +1,7 @@
 ---
 import DiscountIcon from "./icons/DiscountIcon.astro"
 import VelarIcon from "./icons/VelarIcon.astro"
+import ThemeToggle from "./ThemeToggle.astro"
 ---
 
 <div class="top-1 sticky z-50">
@@ -13,11 +14,11 @@ import VelarIcon from "./icons/VelarIcon.astro"
 </div>
 
 
-<header role="banner" id="header" class="font-semibold max-w-6xl mx-auto sticky px-2 top-10 backdrop-blur-md z-80 bg-white/80 border border-gray-400/40 rounded-b-3xl">
+<header role="banner" id="header" class="font-semibold max-w-6xl mx-auto sticky px-2 top-10 backdrop-blur-md z-80 bg-white/80 border border-gray-400/40 rounded-b-3xl dark:bg-[#121212]/80 dark:border-gray-400/20">
     <div class=" px-5 flex justify-between items-center py-2">
 
         <div>
-            <a href="#hero" aria-label="Velar - Inicio" class=" flex items-center hover:text-black/70 transition-colors duration-300">
+            <a href="#hero" aria-label="Velar - Inicio" class=" flex items-center hover:text-black/70 dark:hover:text-white/70 transition-colors duration-300">
                 <VelarIcon class="size-10 w-auto"/>
                 <span class=" text-[28px] leading-relaxed font-serif font-light">Velar</span>
             </a>
@@ -26,26 +27,29 @@ import VelarIcon from "./icons/VelarIcon.astro"
         <nav role="navigation" aria-label="Menú de navegación principal">
             <ul class="flex gap-x-2 text-[15px] ">
                 <li>
-                    <a href="#services" class="flex justify-center border border-transparent opacity-70 hover:bg-black/10 hover:opacity-100  rounded-lg px-4 py-2 transition-all duration-200">
+                    <a href="#services" class="flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100  rounded-lg px-4 py-2 transition-all duration-200">
                         Servicios
                     </a>
                 </li>
                 <li>
-                    <a href="#process" class="flex justify-center border border-transparent opacity-70 hover:bg-black/10 hover:opacity-100 rounded-lg px-4 py-2 transition-all duration-200">
+                    <a href="#process" class="flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100 rounded-lg px-4 py-2 transition-all duration-200">
                         Proceso
                     </a>
                 </li>
                 <li>
-                    <a href="#about" class=" flex justify-center border border-transparent opacity-70 hover:bg-black/10 hover:opacity-100 rounded-lg px-4 py-2 transition-all duration-200">
+                    <a href="#about" class=" flex justify-center border border-transparent opacity-70 hover:bg-black/5 dark:hover:bg-white/5 hover:opacity-100 rounded-lg px-4 py-2 transition-all duration-200">
                         Sobre mí
                     </a>
                 </li>
             </ul>
         </nav>
 
+        <div class="flex items-center gap-2">
+            <ThemeToggle />
             <a href="#contact" class=" flex border text-white border-blue-500/30 shadow-md shadow-blue-600/20 bg-blue-700 px-5 py-1 rounded-3xl hover:bg-blue-700/90 hover:scale-105  transition-all duration-200">
-                    Contacto
+                Contacto
             </a>
+        </div>
 
     </div>
 </header>

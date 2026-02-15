@@ -12,6 +12,13 @@ import Footer from '../components/Footer.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<script is:inline>
+			(function() {
+				var t = localStorage.getItem('theme');
+				var dark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+				if (dark) document.documentElement.classList.add('dark');
+			})();
+		</script>
 		<title>Velar - Desarrollo Web Front-End y Diseño UI</title>
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -28,7 +35,7 @@ import Footer from '../components/Footer.astro';
 
 
 	</head>
-	<body class=" bg-white text-black  antialiased">
+	<body class=" bg-[white] text-black dark:bg-[#131313] dark:text-white/90 antialiased">
 	<Header />
 	<main class="w-full mx-auto">
 		<slot />
